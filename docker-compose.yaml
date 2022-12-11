@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  appSys:
+    image: node:18.12
+    volumes:
+      - .:/node/src/appSys
+
+    ports:
+      - "8000:8000"
+    command: "tail -f /dev/null" #comando para segurar o containner com um processo do nodejs
+
+# Comando para entrar no containner do Node
+# - docker compose exec appSys bash
